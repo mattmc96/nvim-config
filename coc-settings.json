@@ -43,7 +43,12 @@
     "yaml",
     "json",
     "python",
-    "java"
+    "java",
+    "ts",
+    "tsx",
+    "jsx",
+    "golang",
+    "go"
   ],
   "coc.preferences.hoverTarget": "float",
 
@@ -80,7 +85,7 @@
 
   // snippets
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
-  //"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
   // emmet
   "emmet.includeLanguages": {
@@ -116,7 +121,7 @@
   "bookmark.sign": "",
 
   //coc-emoji
-  "coc.source.emoji.filetypes": ["markdown"]
+  "coc.source.emoji.filetypes":["markdown", "javascriptreact", "typescriptreact", "typescript", "javascript", "css", "golang"]
 
   // lua
   //"lua.useSumnekoLs": true,
