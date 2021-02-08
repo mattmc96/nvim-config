@@ -17,7 +17,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " One Dark vim theme
     Plug 'joshdick/onedark.vim'
     " Gruvbox vim theme
-    Plug 'morhetz/gruvbox'
+    " Plug 'morhetz/gruvbox'
     " Stable version of coc
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     " Git intergration
@@ -38,8 +38,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'easymotion/vim-easymotion'
     " Lua
     Plug 'norcalli/nvim-colorizer.lua'
+    " Rainbow paratheses
     Plug 'junegunn/rainbow_parentheses.vim'
+   " Start screen 
     Plug 'mhinz/vim-startify'
+    " Which key
     Plug 'liuchengxu/vim-which-key'
     " Codi
     Plug 'ChristianChiarulli/codi.vim'
@@ -55,8 +58,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mattn/emmet-vim'
      " live server
     Plug 'turbio/bracey.vim'
-     " Better tabline
-    Plug 'romgrk/barbar.nvim'
      " Cool Icons
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
@@ -74,7 +75,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'suy/vim-context-commentstring'
     " highlight all matches under cursor
      Plug 'RRethy/vim-illuminate'
-    " " Easily Create Gists
+    " Easily Create Gists
     Plug 'mattn/vim-gist'
     Plug 'mattn/webapi-vim'
     " Git
@@ -84,16 +85,62 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim'
     Plug 'mhinz/vim-signify'
     Plug 'rhysd/git-messenger.vim'
-
+    " JavaScript
+    Plug 'yuezk/vim-js'
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'jelera/vim-javascript-syntax'
+    " Typescript
+    Plug 'HerringtonDarkholme/yats.vim'    
+     " Vista
+    Plug 'liuchengxu/vista.vim'
+    " Better Syntax Support
+    Plug 'sheerun/vim-polyglot'
+    " Smooth scroll
+    Plug 'psliwka/vim-smoothie'
+    " Swap windows
+    Plug 'wesQ3/vim-windowswap'
+    " Auto change html tags
+    Plug 'AndrewRadev/tagalong.vim'
+    " Surround
+    Plug 'tpope/vim-surround'
+    " Find and replace
+    Plug 'ChristianChiarulli/far.vim'
+    " async tasks
+    Plug 'skywind3000/asynctasks.vim'
+    Plug 'skywind3000/asyncrun.vim'
+    "Ale
+    Plug 'dense-analysis/ale'
+    " Have the file system follow you around
+   Plug 'airblade/vim-rooter'
+    " Text Navigation
+    Plug 'unblevable/quick-scope'
+     " Status Line
+    Plug 'kevinhwang91/rnvimr'
+    " Zen mode
+    Plug 'junegunn/goyo.vim'
+    " auto set indent settings
+    Plug 'tpope/vim-sleuth'
+   " undo time travel
+    Plug 'mbbill/undotree'
+    " Intuitive buffer closing
+    Plug 'moll/vim-bbye'
+    " Debugging
+    Plug 'szw/vim-maximizer'
+    " Neovim in Browser
+   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
+    " Tabline
+    Plug 'romgrk/barbar.nvim'
 
 
     " Not In Use
     
+    "Plug 'puremourning/vimspector'
     " Minimap
-    "Plug 'wfxr/minimap.vim'
-
-
-
+   "Plug 'wfxr/minimap.vim'
+    "Plug 'wfxr/code-minimap'
+     " Better tabline
+    "Plug 'glepnir/galaxyline.nvim'
+    
 call plug#end()
 
     " Automatically install missing plugins on startup
