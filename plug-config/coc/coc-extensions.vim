@@ -9,24 +9,25 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-cssmodules',
   \ 'coc-emoji',
-  \ 'coc-explorer',
   \ 'coc-svg',
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-marketplace',
-  \ 'coc-eslint'
-  \ 'coc-markdownlint'
-  \ 'coc-vimlsp'
-  \ 'coc-word'
+  \ 'coc-eslint',
+  \ 'coc-markdownlint',
+  \ 'coc-vimlsp',
+  \ 'coc-word',
+  \ 'coc-yank',
   \]
+
   "\ 'coc-xml',
+  " \ 'coc-explorer',
   "\ 'coc-python'
   "\ 'coc-stylelintplus',
   "\ 'coc-java-debug',
   " \ 'coc-java',
   " \ 'coc-yaml',
   "\ 'coc-vimlsp',
-  " \ 'coc-yank',
   "\ 'coc-pairs',
   "\ 'coc-sh',
   "\ 'coc-tasks',

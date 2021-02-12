@@ -2,7 +2,7 @@
 
 let @s = 'veS"'
 
-" Timeout
+"Timeout
 let g:which_key_timeout = 100
 
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆'}
@@ -42,7 +42,7 @@ let g:which_key_map['/'] = [ ':call Comment()'                                 ,
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
-let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
+let g:which_key_map['e'] = [ ':NERDTreeToggle'                                 , 'NERDTreeToggle' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
@@ -52,22 +52,25 @@ let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 ,
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
-let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
 " Group mappings
 
 " a is for actions
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
-      \ 'c' : [':ColorizerToggle'        , 'colorizer'],
-      \ 'e' : [':CocCommand explorer'    , 'explorer'],
+       \ 'c' : [':ColorizerToggle'        , 'colorizer'],
+      \ 'd' : [':NERDTreeCWD'         , 'NERDTreeCWD'],
+      \ 'e' : [':NERDTreeToggle'         , 'NERDTreeToggle'],
+      \ 'f' : [':NERDTreeFind'           , 'NERDTreeFind'],
       \ 'h' : [':let @/ = ""'            , 'remove search highlight'],
       \ 'l' : [':Bracey'                 , 'start live server'],
       \ 'L' : [':BraceyStop'             , 'stop live server'],
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
+      \ 'o' : [':NERDTreeFocus'          , 'NERDTreeFocus'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
       \ 's' : [':s/\%V\(.*\)\%V/"\1"/'   , 'surround'],
+      \ 'j' : [':CocCommand coc-codeaction' , 'CodeAction CurrentLine'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
       \ 'v' : [':Codi'                   , 'virtual repl on'],

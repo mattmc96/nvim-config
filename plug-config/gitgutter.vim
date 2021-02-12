@@ -1,12 +1,24 @@
-let g:gitgutter_sign_added              = '▎'
-let g:gitgutter_sign_modified           = '▎'
-let g:gitgutter_sign_removed            = '契'
-let g:gitgutter_sign_removed_first_line = '契'
-let g:gitgutter_sign_modified_removed   = '▎'
-let g:gitgutter_preview_win_floating = 1
+" Change these if you want
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
 
-let g:gitgutter_enabled = 1
+" I find the numbers disctracting
+let g:signify_sign_show_count = 0
+let g:signify_sign_show_text = 1
 
-highlight GitGutterAdd    guifg=#587C0C ctermfg=2
-highlight GitGutterChange guifg=#0C7D9D ctermfg=3
-highlight GitGutterDelete guifg=#94151B ctermfg=1
+
+" Jump though hunks
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
+nmap <leader>gJ 9999<leader>gJ
+nmap <leader>gK 9999<leader>gk
+
+
+" If you like colors instead
+" highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
+" highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
+" highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+"
+set updatetime=100

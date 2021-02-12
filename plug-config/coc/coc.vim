@@ -1,15 +1,60 @@
-set hidden
-
-set nobackup
-set nowritebackup
-
-set cmdheight=2
-
-set updatetime=300
-
-set shortmess+=c
+filetype plugin indent on
 
 
+" “ Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+" “ Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures
+let g:go_auto_type_info = 1
+
+" Run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+" “ Map keys for most used commands.
+" “ Ex: `\b` for building, `\r` for running and `\b` for running test.
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
+
+" Typescript and Javascript 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+syntax sync fromstart
+
+autocmd BufEnter *.{json,js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{json,js,jsx,ts,tsx} :syntax sync clear
+
+"autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
+let g:javascript_plugin_jsdoc = 1
+
+let g:javascript_plugin_ngdoc = 1
+
+"augroup javascript_folding
+"    au!
+"    au FileType javascript setlocal foldmethod=syntax
+"augroup END
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>aj  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+"nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
@@ -132,7 +177,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Mappings using CoCList:
 " Show all dignostics.
 " TODO add these to which key
-" nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+ ":nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " " Manage extensions.
 " nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " " Show commands.

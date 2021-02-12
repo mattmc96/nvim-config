@@ -33,6 +33,7 @@ let g:startify_bookmarks = [
             \ { 'p': '~/Desktop/Projects' },
             \ { 'g': '~/go' },
             \ { 'a': '~/Desktop/Agenda' },
+            \ { 'e': '~/Desktop/Projects/personal-project-V2' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'z': '~/.zshrc' },
             \ { 'c': '~/Packages' },

@@ -1,7 +1,7 @@
 {
   // suggestions
   // "suggest.echodocSupport": true,
-  // TODO add more labels and give them cool glyphs
+  //TODO add more labels and give them cool glyphs
   "suggest.completionItemKindLabels": {
     "text": "t",
     "method": "m",
@@ -19,8 +19,8 @@
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
-  // "diagnostic.displayByAle": true,
-  // "diagnostic.virtualText": true, // this won't work with codelens when error on same line
+  // "diagnostic.displayByAle": false,
+  // "diagnostic.virtualText": false, // this won't work with codelens when error on same line
 
   // codelens
   "codeLens.enable": true,
@@ -33,11 +33,29 @@
   "list.indicator": ">",
   "list.selectedSignText": " ",
 
+  // Eslint
+
+  "eslint.autoFixOnSave": true,
+  "eslint.fileTypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx"
+  ],
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.diagnostic.virtualText": true,
+
   // autoformat
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
     "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
     "graphql",
     "html",
     "yaml",
@@ -53,7 +71,7 @@
   "coc.preferences.hoverTarget": "float",
 
   // python config
-  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoImportCompletions": false,
   "python.analysis.autoSearchPaths": true,
   "python.analysis.diagnosticMode": "openFilesOnly",
   "python.analysis.stubPath": "typings",
@@ -90,11 +108,12 @@
   // emmet
   "emmet.includeLanguages": {
     "vue-html": "html",
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
   },
 
   // CSS (disable since I'm also using stylelintplus)
-  "css.validate": false,
+  "css.validate": true,
   "less.validate": false,
   "scss.validate": false,
   "wxss.validate": false,
@@ -110,6 +129,7 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
+  "coc.preferences.extensionUpdateCheck": "never"
   /* "languageserver": { */
   /*   "lua": { */
   /*     "command": "/home/chris/.luambenvs/neovim4/bin/lua-lsp", */
@@ -118,10 +138,11 @@
   /*   } */
   /* }, */
 
-  "bookmark.sign": "",
-
-  //coc-emoji
-  "coc.source.emoji.filetypes":["markdown", "javascriptreact", "typescriptreact", "typescript", "javascript", "css", "golang"]
+  //  "typescript",
+  // "javascript",
+  // "css",
+  // "golang"
+  // ]
 
   // lua
   //"lua.useSumnekoLs": true,

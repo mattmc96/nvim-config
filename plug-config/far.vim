@@ -3,7 +3,6 @@ let g:far#source='rgnvim'
 " let g:far#source='vimgrep'
 " let g:far#source='ag'
 
-set lazyredraw            " improve scrolling performance when navigating through large results
 
 let g:far#window_width=50
 " Use %:p with buffer option only
