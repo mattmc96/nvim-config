@@ -14,20 +14,16 @@ let g:gruvbox_transparent_bg=40
 
 
 syntax on
-colorscheme gruvbox
+colorscheme molokai
 
+" set termguicolors     
 
 "checks if your terminal has 24-bit color support
-" if has("termguicolors")     " set true colors
-"     set t_8f=\[[38;2;%lu;%lu;%lum
-"     set t_8b=\[[48;2;%lu;%lu;%lum
-"     set termguicolors
-" endif
+if has("termguicolors")     " set true colors
+    set t_8f=\[[38;2;%lu;%lu;%lum
+    set t_8b=\[[48;2;%lu;%lu;%lum
+    set termguicolors
+endif
 
-" hi! Normal ctermbg=NONE guibg=NONE
-" hi! NonText ctermbg=NONE guibg=NONE
-
-" hi Normal guibg=NONE ctermbg=NONE
-" hi LineNr guibg=NONE ctermbg=NONE
-" hi SignColumn guibg=NONE ctermbg=NONE
-" hi EndOfBuffer guibg=NONE ctermbg=NONE
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE

@@ -39,8 +39,10 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 let g:which_key_map['/'] = [ ':call Comment()'                                 , 'comment' ]
+let g:which_key_map['*'] = [  ':e /.config/nvim/vim-plug/plugins.vim'  , 'open plugins']     
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
+let g:which_key_map['!'] = [  ':Startify'                                      , 'Start Page']     
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
 let g:which_key_map['e'] = [ ':NERDTreeToggle'                                 , 'NERDTreeToggle' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
@@ -107,10 +109,10 @@ let g:which_key_map.b = {
 " c is for actions
 let g:which_key_map.c = {
       \ 'name' : '+calendar' ,
-       \ 'c' : ['<Plug>Calendar'        , 'Calendar'],
-      \ 'h' : ['<Plug>CalendarH' , 'CalendarH'],
-      \ 't' : ['<Plug>CalendarT'  , 'CalendarT'],
-      \ 'v' : ['<Plug>CalendarV'        , 'CalendarVR'],
+      \ 'a' : [':Calendar'         , 'Calendar'],
+      \ 'l' : [':CalendarVR'       , 'CalendarV'],
+      \ 'h':  [':CalendarH'        , 'CalendarH'],
+      \ 't' : [':CalendarT'         , 'CalendarT'],
       \ }
 
 " d is for debug
@@ -352,26 +354,24 @@ let g:which_key_map.t = {
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
 
-w is for wiki
+"w is for wiki
 let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
-      \ 'w' : ['<Plug>VimwikiIndex'                              , 'ncdu'],
-      \ 'n' : ['<plug>(wiki-open)'                              , 'ncdu'],
-      \ 'j' : ['<plug>(wiki-journal)'                              , 'ncdu'],
-      \ 'R' : ['<plug>(wiki-reload)'                              , 'ncdu'],
-      \ 'c' : ['<plug>(wiki-code-run)'                              , 'ncdu'],
-      \ 'b' : ['<plug>(wiki-graph-find-backlinks)'                              , 'ncdu'],
-      \ 'g' : ['<plug>(wiki-graph-in)'                              , 'ncdu'],
-      \ 'G' : ['<plug>(wiki-graph-out)'                              , 'ncdu'],
-      \ 'l' : ['<plug>(wiki-link-toggle)'                              , 'ncdu'],
-      \ 'd' : ['<plug>(wiki-page-delete)'                              , 'ncdu'],
-      \ 'r' : ['<plug>(wiki-page-rename)'                              , 'ncdu'],
-      \ 't' : ['<plug>(wiki-page-toc)'                              , 'ncdu'],
-      \ 'T' : ['<plug>(wiki-page-toc-local)'                              , 'ncdu'],
-      \ 'e' : ['<plug>(wiki-export)'                              , 'ncdu'],
-      \ 'u' : ['<plug>(wiki-list-uniq)'                              , 'ncdu'],
-      \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'ncdu'],
+      \ 'a' : [':VimwikiTabIndex'                       , 'VimwikiTabIndex'],
+      \ 'g' : [':VimwikiDiaryGenerateLinks'             , 'VimwikiDiaryGenerateLinks'],
+      \ 'h' : [':VimwikiAddHeaderLevel'                 , 'VimwikiAddHeaderLevel'],
+      \ 'i' : [':VimwikiDiaryIndex'                     , 'VimwikiDiaryIndex'],
+      \ 'n' : [':VimwikiTabMakeDiaryNote'               , 'VimwikiTabMakeDiaryNote'],
+      \ 'm' : [':VimwikiMakeDiaryNote'                  , 'VimwikiMakeDiaryNote'],
+      \ 'l' : [':VimwikiTabnewLink'                     , 'VimwikiTabnewLink'],
+      \ 'u' : [':VimwikiUISelect'                       , 'VimwikiUISelect'],
+      \ 't' : [':VimwikiMakeTomorrowDiaryNote'          , 'VimwikiMakeTomorrowDiaryNote'],
+      \ 'w' : [':VimwikiIndex'                          , 'VimwikiIndex'],
+      \ 'y' : [':VimwikiMakeYesterdayDiaryNote'         , 'VimwikiMakeYesterdayDiaryNote'],
+      \ ' ' : [':VimwikiIndex'                          , 'VimwikiIndex'],
       \ }
+
+
 
 " Global
 "<Plug>VimwikiIndex

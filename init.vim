@@ -17,18 +17,28 @@ if exists('g:vscode')
   source $HOME/.config/nvim/plug-config/easymotion.vim
 else
 
-source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/functions.vim
-source $HOME/.config/nvim/keys/mappings.vim
+  source $HOME/.config/nvim/vim-plug/plugins.vim
+  source $HOME/.config/nvim/general/settings.vim
+  source $HOME/.config/nvim/general/functions.vim
+  source $HOME/.config/nvim/keys/mappings.vim
 
-  source $HOME/.config/nvim/themes/gruvbox.vim
+   " source $HOME/.config/nvim/themes/gruvbox.vim
+  " source $HOME/.config/nvim/themes/molokai.vim
+   "source $HOME/.config/nvim/themes/nightowl.vim
+    " source $HOME/.config/nvim/themes/nord.vim
+  " source $HOME/.config/nvim/themes/ayu.vim
+  " source $HOME/.config/nvim/themes/tokyo.vim
+  " source $HOME/.config/nvim/themes/onehalf.vim
+   " source $HOME/.config/nvim/themes/oceanicnext.vim
+  " source $HOME/.config/nvim/themes/airline.vim
+  source $HOME/.config/nvim/themes/dracula.vim
   source $HOME/.config/nvim/themes/lightline.vim
   " Plugin Configuration
   source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/keys/which-key.vim
   source $HOME/.config/nvim/plug-config/rnvimr.vim
   source $HOME/.config/nvim/plug-config/better-whitespace.vim
+  " source $HOME/.config/nvim/plug-config/multiple.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/vim-rooter.vim
   source $HOME/.config/nvim/plug-config/start-screen.vim
@@ -41,13 +51,13 @@ source $HOME/.config/nvim/keys/mappings.vim
   source $HOME/.config/nvim/plug-config/asynctask.vim
   source $HOME/.config/nvim/plug-config/window-swap.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
-   source $HOME/.config/nvim/plug-config/rainbow.vim
-   source $HOME/.config/nvim/plug-config/illuminate.vim
-   source $HOME/.config/nvim/plug-config/vista.vim
-   source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
-   source $HOME/.config/nvim/plug-config/coc/coc.vim
-   source $HOME/.config/nvim/plug-config/quickscope.vim
-   source $HOME/.config/nvim/plug-config/nerdtree.vim
+  source $HOME/.config/nvim/plug-config/rainbow.vim
+  source $HOME/.config/nvim/plug-config/illuminate.vim
+  source $HOME/.config/nvim/plug-config/vista.vim
+  source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
+  source $HOME/.config/nvim/plug-config/coc/coc.vim
+  source $HOME/.config/nvim/plug-config/quickscope.vim
+  source $HOME/.config/nvim/plug-config/nerdtree.vim
 endif
 
 " Add paths to node and python here

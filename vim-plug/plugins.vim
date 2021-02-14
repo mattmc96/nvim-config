@@ -1,4 +1,4 @@
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
+:if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
@@ -9,12 +9,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-
-    " Theme
-    Plug 'morhetz/gruvbox'
-    
-    " Stable version of coc
-   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+   " Theme
+   " Plug 'sainnhe/gruvbox-material'
+   " Plug 'morhetz/gruvbox'
+   " Plug 'sonph/onehalf', { 'rtp': 'vim' }
+    " Plug 'ayu-theme/ayu-vim' 
+   Plug 'dracula/vim'
+   " Stable version of coc
+    Plug 'tomasr/molokai'
+    Plug 'haishanh/night-owl.vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
    
     " Autocompletion
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
@@ -27,13 +31,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim'
 
     " Airline Status bar & Buffers
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-
-     "Plug 'itchyny/lightline.vim'
-     Plug 'bling/vim-bufferline'
-     Plug 'edkolev/tmuxline.vim'
-     "Plug 'lambdalisue/battery.vim'
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'itchyny/lightline.vim'
+    Plug 'bling/vim-bufferline'
+    "Plug 'edkolev/tmuxline.vim'
+    "Plug 'lambdalisue/battery.vim'
      
     "Ranger
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
@@ -43,7 +46,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter' 
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
-    Plug 'junegunn/fzf.vim'
 
     " Easymotion
     Plug 'easymotion/vim-easymotion'
@@ -186,8 +188,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Vim Wiki
     Plug 'vimwiki/vimwiki'
     Plug 'mattn/calendar-vim'
+      
+    " Multiple cursors
+    " Plug 'terryma/vim-multiple-cursors'
 
-   " live server
+    " live server
     "Plug 'turbio/bracey.vim'
      " Vista
     "Plug 'liuchengxu/vista.vim'

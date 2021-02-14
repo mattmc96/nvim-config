@@ -33,7 +33,7 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-set numberwidth=5
+set numberwidth=4
 set showcmd
 set title
 set lazyredraw
@@ -43,6 +43,7 @@ set dir=~/.cache/vim
 set confirm
 set shortmess+=c
 set autowrite
+set nocompatible
 " set spell
 "set colorcolumn=80
 "set autochdir                           " Your working directory will always be the same as your working directory

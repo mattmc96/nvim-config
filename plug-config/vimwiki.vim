@@ -1,7 +1,7 @@
 " VimWiki
   let g:vimwiki_key_mappings =
     \ {
-    \   'all_maps': 1,
+    \   'all_maps': 0,
     \   'global': 1,
     \   'headers': 1,
     \   'text_objs': 1,
@@ -35,7 +35,7 @@ function! ToggleCalendar()
     let g:calendar_open = 1
   end
 endfunction
-:autocmd FileType vimwiki map c :call ToggleCalendar()
+":autocmd FileType vimwiki map c :call ToggleCalendar()
 
  let g:vimwiki_auto_header = 0
 " let g:vimwiki_markdown_header_style = 1
@@ -44,7 +44,7 @@ endfunction
 " let g:vimwiki_links_header_level = 1
 " let g:vimwiki_links_header = 'Generated Links'
 " let g:vimwiki_auto_chdir = 0
-" let g:vimwiki_map_prefix = '<Leader>w'
+ " let g:vimwiki_map_prefix = '<Leader>w'
 " let g:vimwiki_toc_link_format = 0
 " let g:vimwiki_toc_header_level = 1
 " let g:vimwiki_toc_header = 'Contents'
